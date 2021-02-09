@@ -10,16 +10,7 @@ will set the dog object's name to be the passed in name. See below for examples:
 
 
 Examples:
-let dog1 = Dog.makeJet(); // returns an object 
 
-console.log(dog1.name); // Jet
-console.log(dog1.speak("hello")); // Jet says hello
-console.log(dog1.changeName("Freyja")); // Freyja
-console.log(dog1.name); // Freyja
-console.log(dog1.speak("hello")); // Freyja says hello
-
-let dog2 = Dog.makeJet();
-console.log(dog2.name); // Jet
 
 ***********************************************************************/
 
@@ -31,5 +22,25 @@ Dog.makeJet = function() {
 	return new this('Jet')
 }
 
+Dog.prototype.changeName = function(newName) {
+	this.name = newName;
+	return this.name;
+}
+
+Dog.prototype.speak = function(word) {
+	return `${this.name} says ${word}`;
+}
+
+
+// let dog1 = Dog.makeJet(); // returns an object 
+
+// console.log(dog1.name); // Jet
+// console.log(dog1.speak("hello")); // Jet says hello
+// console.log(dog1.changeName("Freyja")); // Freyja
+// console.log(dog1.name); // Freyja
+// console.log(dog1.speak("hello")); // Freyja says hello
+
+// let dog2 = Dog.makeJet();
+// console.log(dog2.name); // Jet
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = Dog;

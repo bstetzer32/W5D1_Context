@@ -5,6 +5,16 @@ the function being invoked with the passed in object as it's context.
 
 Take careful note of how this is invoked:
 
+
+***********************************************************************/
+
+// your code here!
+
+function changeContext(func, object) {
+  return object.func.bind(object);
+}
+
+
 let map = {
   secret: "I don't know where I'm going",
 };
@@ -19,11 +29,6 @@ function getSecret() {
 
 console.log(changeContext(getSecret, bat)); // prints "I'm scared of the dark"
 console.log(changeContext(getSecret, map)); // prints "I don't know where I'm going"
-
-***********************************************************************/
-
-// your code here!
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
