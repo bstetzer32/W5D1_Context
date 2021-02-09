@@ -33,7 +33,9 @@ console.log(bowSandy("Joe", "Nico")); // prints "You bowed to Sandy and Joe and 
 
 ***********************************************************************/
 
-// your code here!
+function name(params) {
+  
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -11,7 +11,8 @@ Take careful note of how this is invoked:
 // your code here!
 
 function changeContext(func, object) {
-  return object.func.bind(object);
+  let contextChange = func.bind(object);
+  return contextChange();
 }
 
 

@@ -5,8 +5,8 @@ function that will utilize the original argument passed into boundByAnArg.
 
 See below for an example:
 
-function iSpy(thing) {
-  return "I spy a " + thing;
+function iSpy(thing1, thing2) {
+  return "I spy a " + thing1 + thing2;
 }
 
 let spyTree = boundByAnArg(iSpy, "tree");
@@ -19,7 +19,10 @@ console.log(spyCar("potato")); // prints "I spy a car"
 
 ***********************************************************************/
 
-// your code here!
+function boundByAnArg(func, arg) {
+  let argBinding = func.bind(null, arg);
+  return argBinding;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
