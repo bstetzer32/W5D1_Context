@@ -24,5 +24,10 @@ function Car() {
 	this.speed = 0
 }
 
+Car.prototype.drive = function (newSpeed) {
+	this.speed = newSpeed;
+	return this.speed;
+};
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = Car;
